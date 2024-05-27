@@ -5,13 +5,47 @@
 class ListDir < Formula
   desc "Listar recursivamente archivos y directorios"
   homepage "https://github.com/drossan/list-dir-go"
-  version "0.0.5"
-  depends_on :macos
+  version "0.0.6"
 
-  url "https://github.com/drossan/list-dir-go/releases/download/v0.0.5/list-dir-go_0.0.5_darwin_all.tar.gz"
-  sha256 "9e699fe2090d4ac7b2da40831ccd8a8c0a973e542b89f968f2c9ec4fbe34c1f3"
+  on_macos do
+    url "https://github.com/drossan/list-dir-go/releases/download/v0.0.6/list-dir-go_0.0.6_darwin_all.tar.gz"
+    sha256 "059ab8991737ae0fb6820e70b8fef23cd33a6e347cb95ab0f3d575f9d686764d"
 
-  def install
-    bin.install "list-dir"
+    def install
+      bin.install "list-dir"
+    end
+  end
+
+  on_linux do
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/drossan/list-dir-go/releases/download/v0.0.6/list-dir-go_0.0.6_linux_amd64.tar.gz"
+        sha256 "44afb436ff3b1cd70846f42560c9efa863d3751198ddfbf19d60a94021567b25"
+
+        def install
+          bin.install "list-dir"
+        end
+      end
+    end
+    on_arm do
+      if !Hardware::CPU.is_64_bit?
+        url "https://github.com/drossan/list-dir-go/releases/download/v0.0.6/list-dir-go_0.0.6_linux_armv6.tar.gz"
+        sha256 "dc660dadddf07c4f9dc7c8b0d48beb97ff66a7782feaf6628ea3453ad39fbf42"
+
+        def install
+          bin.install "list-dir"
+        end
+      end
+    end
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/drossan/list-dir-go/releases/download/v0.0.6/list-dir-go_0.0.6_linux_arm64.tar.gz"
+        sha256 "e3430f2a476a574dd8269108eb48a0734e570a4287ab0910d058921dc6cbdafd"
+
+        def install
+          bin.install "list-dir"
+        end
+      end
+    end
   end
 end
