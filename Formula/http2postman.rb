@@ -5,11 +5,11 @@
 class Http2postman < Formula
   desc "Exporta tu colección http-request a postman"
   homepage "https://github.com/drossan/http2postman"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
-    url "https://github.com/drossan/http2postman/releases/download/v0.0.3/http2postman_0.0.3_darwin_all.tar.gz"
-    sha256 "b08a885f2f46e1b59676c6e4cc44af0713e18fcdf607000e4f32ce359459b02f"
+    url "https://github.com/drossan/http2postman/releases/download/v0.0.4/http2postman_0.0.4_darwin_all.tar.gz"
+    sha256 "e48b4f3432eb963a548a5dd5fffc6ce089ea9e6be8b77b4078c4c1856dda423c"
 
     def install
       bin.install "http2postman"
@@ -19,31 +19,31 @@ class Http2postman < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/drossan/http2postman/releases/download/v0.0.3/http2postman_0.0.3_linux_amd64.tar.gz"
-        sha256 "cb0974abc2c1535279ea158f407b9cf83d26b8d482fb9ab04aa0857ad0cc0e95"
+        url "https://github.com/drossan/http2postman/releases/download/v0.0.4/http2postman_0.0.4_linux_amd64.tar.gz"
+        sha256 "c6bd91f05c0c4bf63894b0238089792facc2d3433ad171341adb3707cc450733"
 
         def install
-          bin.install "griddo-env"
+          bin.install "http2postman"
         end
       end
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/drossan/http2postman/releases/download/v0.0.3/http2postman_0.0.3_linux_armv6.tar.gz"
-        sha256 "7efc044a645041ec34f07774f365e7ad8f1d7f3fc3af476281ec81accaf5bc81"
+        url "https://github.com/drossan/http2postman/releases/download/v0.0.4/http2postman_0.0.4_linux_armv6.tar.gz"
+        sha256 "ccad750e6b10ab817bf9edea4743220248e385c8f303f51ebdb9ba48d022f56e"
 
         def install
-          bin.install "griddo-env"
+          bin.install "http2postman"
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/drossan/http2postman/releases/download/v0.0.3/http2postman_0.0.3_linux_arm64.tar.gz"
-        sha256 "8363b940878f0a8d0e1b98c7599aee08cfdcf9e2a62d6354bfe0b4e05ce73d42"
+        url "https://github.com/drossan/http2postman/releases/download/v0.0.4/http2postman_0.0.4_linux_arm64.tar.gz"
+        sha256 "d38c7d72d14bf048b87b318a28f80f4107491cd9e9970aad9a04505fbedbd7d3"
 
         def install
-          bin.install "griddo-env"
+          bin.install "http2postman"
         end
       end
     end
