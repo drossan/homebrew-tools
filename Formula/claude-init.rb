@@ -5,12 +5,12 @@
 class ClaudeInit < Formula
   desc "CLI tool to initialize projects with AI-assisted development configuration"
   homepage "https://github.com/drossan/claude-init"
-  version "1.0.9"
+  version "1.0.10"
   license "MIT"
 
   on_macos do
-    url "https://github.com/drossan/claude-init/releases/download/v1.0.9/claude-init-1.0.9-darwin-all.tar.gz", using: GitHubReleaseDownloadStrategy
-    sha256 "25c981cbd9afcbc9b5737d1e2064c46b91331005b25063bd80d501fafa593001"
+    url "https://github.com/drossan/claude-init/releases/download/v1.0.10/claude-init-1.0.10-darwin-all.tar.gz"
+    sha256 "35b237c63c234550d1571fe4b7cc8f42d6e243ff97a3399ff468163e3490575b"
 
     def install
       bin.install "claude-init"
@@ -19,15 +19,15 @@ class ClaudeInit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drossan/claude-init/releases/download/v1.0.9/claude-init-1.0.9-linux-amd64.tar.gz", using: GitHubReleaseDownloadStrategy
-      sha256 "501a7211869f44e88c05eb7ec2a7295be6f1633192622ee1ff5b39870b096564"
+      url "https://github.com/drossan/claude-init/releases/download/v1.0.10/claude-init-1.0.10-linux-amd64.tar.gz"
+      sha256 "9931146e86f5b6635edf2d0ee3a9f8742282496ddda3a9b2ab4006f7bbabdcd5"
       def install
         bin.install "claude-init"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drossan/claude-init/releases/download/v1.0.9/claude-init-1.0.9-linux-arm64.tar.gz", using: GitHubReleaseDownloadStrategy
-      sha256 "0dd4bff93ccc46b891fe21aadc7ac461750c0e95acbe98adafd27a075e30421d"
+      url "https://github.com/drossan/claude-init/releases/download/v1.0.10/claude-init-1.0.10-linux-arm64.tar.gz"
+      sha256 "497dd5881b77c73080d98855ef40bb65b96f9b72b5469dbe425945c9c7a71a0c"
       def install
         bin.install "claude-init"
       end
