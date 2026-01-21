@@ -5,12 +5,12 @@
 class ClaudeInit < Formula
   desc "CLI tool to initialize projects with AI-assisted development configuration"
   homepage "https://github.com/drossan/claude-init"
-  version "1.0.10"
+  version "1.0.11"
   license "MIT"
 
   on_macos do
-    url "https://github.com/drossan/claude-init/releases/download/v1.0.10/claude-init-1.0.10-darwin-all.tar.gz"
-    sha256 "35b237c63c234550d1571fe4b7cc8f42d6e243ff97a3399ff468163e3490575b"
+    url "https://github.com/drossan/claude-init/releases/download/v1.0.11/claude-init-1.0.11-darwin-all.tar.gz"
+    sha256 "9864acece033177586d0da4d16871d5b79228e9bc19952940db482fd49331817"
 
     def install
       bin.install "claude-init"
@@ -19,15 +19,15 @@ class ClaudeInit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drossan/claude-init/releases/download/v1.0.10/claude-init-1.0.10-linux-amd64.tar.gz"
-      sha256 "9931146e86f5b6635edf2d0ee3a9f8742282496ddda3a9b2ab4006f7bbabdcd5"
+      url "https://github.com/drossan/claude-init/releases/download/v1.0.11/claude-init-1.0.11-linux-amd64.tar.gz"
+      sha256 "d39322da488a97ffc851686068ab142bb932760e416ed0da192c1ad97233ad5c"
       def install
         bin.install "claude-init"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drossan/claude-init/releases/download/v1.0.10/claude-init-1.0.10-linux-arm64.tar.gz"
-      sha256 "497dd5881b77c73080d98855ef40bb65b96f9b72b5469dbe425945c9c7a71a0c"
+      url "https://github.com/drossan/claude-init/releases/download/v1.0.11/claude-init-1.0.11-linux-arm64.tar.gz"
+      sha256 "016e918c593ad42f20bd1ff9aa465ad6bf31eeac774a2cb20afdb9494846f934"
       def install
         bin.install "claude-init"
       end
