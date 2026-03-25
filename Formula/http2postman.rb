@@ -5,11 +5,11 @@
 class Http2postman < Formula
   desc "Exporta tu colección http-request a postman"
   homepage "https://github.com/drossan/http2postman"
-  version "0.0.4"
+  version "1.1.0"
 
   on_macos do
-    url "https://github.com/drossan/http2postman/releases/download/v0.0.4/http2postman_0.0.4_darwin_all.tar.gz"
-    sha256 "e48b4f3432eb963a548a5dd5fffc6ce089ea9e6be8b77b4078c4c1856dda423c"
+    url "https://github.com/drossan/http2postman/releases/download/v1.1.0/http2postman_1.1.0_darwin_all.tar.gz"
+    sha256 "d6155e56abef53db686d32560ce781974c5d6f1a7005983541b420f3841a6744"
 
     def install
       bin.install "http2postman"
@@ -19,8 +19,8 @@ class Http2postman < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/drossan/http2postman/releases/download/v0.0.4/http2postman_0.0.4_linux_amd64.tar.gz"
-        sha256 "c6bd91f05c0c4bf63894b0238089792facc2d3433ad171341adb3707cc450733"
+        url "https://github.com/drossan/http2postman/releases/download/v1.1.0/http2postman_1.1.0_linux_amd64.tar.gz"
+        sha256 "aeae9bfaf66256191d9eaed4bc4981d2a1801a57b04646571add057d22445e5d"
 
         def install
           bin.install "http2postman"
@@ -29,8 +29,8 @@ class Http2postman < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/drossan/http2postman/releases/download/v0.0.4/http2postman_0.0.4_linux_armv6.tar.gz"
-        sha256 "ccad750e6b10ab817bf9edea4743220248e385c8f303f51ebdb9ba48d022f56e"
+        url "https://github.com/drossan/http2postman/releases/download/v1.1.0/http2postman_1.1.0_linux_armv6.tar.gz"
+        sha256 "798be44cbcd93dd01f991791794009ae89076f77cdd1b20ddc37b105a6a768a3"
 
         def install
           bin.install "http2postman"
@@ -39,8 +39,8 @@ class Http2postman < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/drossan/http2postman/releases/download/v0.0.4/http2postman_0.0.4_linux_arm64.tar.gz"
-        sha256 "d38c7d72d14bf048b87b318a28f80f4107491cd9e9970aad9a04505fbedbd7d3"
+        url "https://github.com/drossan/http2postman/releases/download/v1.1.0/http2postman_1.1.0_linux_arm64.tar.gz"
+        sha256 "48138f7948a73fcacf40910e12a7979f05f29b50b647abbdffb6fa77ccc6955d"
 
         def install
           bin.install "http2postman"
